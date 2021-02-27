@@ -1,0 +1,29 @@
+cc_binary(
+    name = "miniaudio-demo",
+    srcs = [
+        "src/main.c",
+    ],
+    deps = [
+        "miniaudio",
+    ],
+    linkopts = [
+        "-lpthread",
+        "-lm",
+        "-ldl",
+    ]
+)
+
+cc_library(
+    name = "miniaudio",
+    srcs = [
+        "src/miniaudio/extras/miniaudio_split/miniaudio.c",
+    ],
+    hdrs = [
+        "src/miniaudio/extras/miniaudio_split/miniaudio.h",
+    ],
+    linkopts = [
+        "-lpthread",
+        "-lm",
+        "-ldl",
+    ]
+)
