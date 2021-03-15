@@ -3,14 +3,14 @@ cc_binary(
     srcs = [
         "src/main.c",
     ],
-    deps = [
-        "miniaudio",
-    ],
     linkopts = [
         "-lpthread",
         "-lm",
         "-ldl",
-    ]
+    ],
+    deps = [
+        "miniaudio",
+    ],
 )
 
 cc_library(
@@ -25,5 +25,5 @@ cc_library(
         "-lpthread",
         "-lm",
         "-ldl",
-    ]
+    ],
 )
